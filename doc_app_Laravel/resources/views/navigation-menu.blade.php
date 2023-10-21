@@ -15,6 +15,11 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
+                    <li>
+                        <a href="{{ route('register') }}" :class="{ 'bg-blue-200': isActive('/register') }">
+                            Register
+                        </a>
+                    </li>
                 </div>
             </div>
 

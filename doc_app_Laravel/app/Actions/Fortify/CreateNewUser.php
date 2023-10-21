@@ -2,15 +2,12 @@
 
 namespace App\Actions\Fortify;
 
-use App\Models\Doctor;
 use App\Models\User;
-use App\Models\UserDetails;
+use App\Models\Doctor;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
-
-//this is to register new user/doctor
 
 class CreateNewUser implements CreatesNewUsers
 {
@@ -40,8 +37,9 @@ class CreateNewUser implements CreatesNewUsers
 
         $doctorInfo = Doctor::create([
             'doc_id' => $user->id,
-            'status' => 'active'
-        ]);
+            'status' =>'active'
+        ]);        
+        
 
         return $user;
     }

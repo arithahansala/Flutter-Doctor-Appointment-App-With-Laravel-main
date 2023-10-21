@@ -22,8 +22,8 @@ class SocialButton extends StatelessWidget {
           children: <Widget>[
             Image.asset(
               'assets/$social.png',
-              width: 40,
-              height: 40,
+              width: 30,
+              height: 30,
             ),
             Text(
               social.toUpperCase(),
@@ -31,7 +31,7 @@ class SocialButton extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-          ],
+        ],
         ),
       ),
     );

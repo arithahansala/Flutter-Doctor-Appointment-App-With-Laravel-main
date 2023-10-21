@@ -80,9 +80,9 @@ class _LoginFormState extends State<LoginForm> {
                   final token = await DioProvider()
                       .getToken(_emailController.text, _passController.text);
 
-                  if (token) {
+                  if (token != null) {
                     //auth.loginSuccess(); //update login status
-                    //rediret to main page
+                    //redirect to main page
 
                     //grab user data here
                     final SharedPreferences prefs =

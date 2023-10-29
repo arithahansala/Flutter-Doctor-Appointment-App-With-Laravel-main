@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Actions\Fortify;
-
+use App\Models\Doctor;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
@@ -37,14 +37,16 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'email' => $input['email'],
             ])->save();
         }
+
+        $doctor = Doctor::where('doc_id', $user->id)
+        ->update([
+            'experience' => $input['experience'],
+            'bio_data' => $input['bio_data'],
+            'category' => $input['category'],
+    ]);
     }
 
-    $doctor = Doctor::where('doc_id', $user->id)
-    ->update([
-        'experience' => $input['experience'],
-        'bio_data' => $input['bio_data'],
-        'category' => $input['category'],
-    ]);
+    
 
     /**
      * Update the given verified user's profile information.

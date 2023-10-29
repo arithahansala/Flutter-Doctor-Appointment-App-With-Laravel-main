@@ -69,7 +69,7 @@
         <!-- Experience -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="experience" value="{{ __('Experience') }}" />
-            <x-jet-input id="experience" type="number" min ="0" max="60" class="mt-1 block w-full" wire:model.defer="state.experience" autocomplete="experience" />
+            <x-jet-input id="experience" type="number" class="mt-1 block w-full" wire:model.defer="state.experience" autocomplete="experience" />
             <x-jet-input-error for="experience" class="mt-2" />
         </div>
 

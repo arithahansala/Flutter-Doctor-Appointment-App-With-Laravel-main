@@ -16,24 +16,24 @@ class SocialButton extends StatelessWidget {
       ),
       onPressed: () {},
       child: SizedBox(
-        width: Config.widthSize * 0.4,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Image.asset(
-              'assets/$social.png',
-              width: 30,
-              height: 30,
+            width: Config.widthSize * 0.4,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Image.asset(
+                  'assets/$social.png',
+                  width: 20,
+                  height: 20,
+                ),
+                Text(
+                  social.toUpperCase(),
+                  style: const TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+              ],
             ),
-            Text(
-              social.toUpperCase(),
-              style: const TextStyle(
-                color: Colors.black,
-              ),
-            ),
-        ],
-        ),
-      ),
+          ),
     );
   }
 }
